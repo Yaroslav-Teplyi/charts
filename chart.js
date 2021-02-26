@@ -1,3 +1,5 @@
+'use strict'
+
 import  {a} from '/modules/variables.js';
 
 console.log(a)
