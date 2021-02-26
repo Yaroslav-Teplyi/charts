@@ -1,2 +1,2 @@
-https://yaroslav-teplyi.github.io/charts/index.html
+https://yaroslav-teplyi.github.io/charts
 
