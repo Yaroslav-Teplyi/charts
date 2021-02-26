@@ -1,4 +1,4 @@
-import  {a} from 'variables.js';
+import  {a} from '/modules/variables.js';
 
 console.log(a)
 
