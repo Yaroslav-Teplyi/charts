@@ -1,9 +1,3 @@
-'use strict'
-
-import  {a} from 'variables.js';
-
-console.log(a)
-
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -41,3 +35,7 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+let a = {
+    a: '1'
+}
