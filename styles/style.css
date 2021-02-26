@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.chart-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    width: 500px;
+}
