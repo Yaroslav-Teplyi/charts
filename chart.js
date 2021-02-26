@@ -35,3 +35,7 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+let a = {
+    a: '1'
+}
