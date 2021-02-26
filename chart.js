@@ -1,9 +1,3 @@
-'use strict'
-
-import  {a} from '/modules/variables.js';
-
-console.log(a)
-
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
