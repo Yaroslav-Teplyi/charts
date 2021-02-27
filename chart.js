@@ -19,10 +19,10 @@ function chartRender() {
     myChart = new Chart(ctx, {
         type: typeOfChart,
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: labelsValues,
             datasets: [{
                 label: '# of Votes',
-                data: [12, 19, -3, 5, 2, 3],
+                data: numberValues,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -58,24 +58,28 @@ function chartRender() {
 function chartTypeChecked() {
     if(lineChart.checked) {
         typeOfChart = 'line'
-        console.log(typeOfChart)
     } else if(pieChart.checked) {
         typeOfChart = 'pie'
-        console.log(typeOfChart)
     } else {
         typeOfChart = 'bar'
     }
 }
 
+
+
 // нажатие на сабмит кнопку
 submitBtn.addEventListener('click', () => {
+    // очистка массива, чтобы не переполнять 
+    labelsValues.splice(0, labelsValues.length);
+    numberValues.splice(0, numberValues.length);
+
+    // уничтожение чарта, чтобы не было бага с наведением
     if(myChart != undefined){
         myChart.destroy();
     }
-    // inner.classList.remove('disabled')
-    // mainForm.classList.add('disabled')
+
     chartTypeChecked();
-    
+    labelAndNumberValues() 
     chartRender();
 })
 
@@ -91,3 +95,17 @@ addMoreElementsBtn.addEventListener('click', () => {
         alert('No more!!!');
     }
 })
+
+let labelsValues = [],
+    numberValues = []
+
+function labelAndNumberValues() {
+    for(let i = 1; i <= numberOfInputs; i++) {
+        let lbls = document.getElementById(`labelName${i}`).value
+        labelsValues.push(lbls)
+        
+        let nbs = document.getElementById(`labelValue${i}`).value
+        numberValues.push(nbs)
+    }
+}
+
