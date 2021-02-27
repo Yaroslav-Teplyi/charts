@@ -5,9 +5,41 @@
 }
 
 .chart-wrapper {
-    display: flex;
-    align-items: center;
     margin: 0 auto;
     height: 100vh;
-    width: 500px;
+    width: 700px;
+}
+
+.chart-inner {
+
+}
+
+.options {
+}
+.type {
+    display: flex;
+    flex-direction: column;
+}
+.type__title {
+}
+.type__type {
+}
+.type__bar {
+}
+.type__line {
+}
+.type__pie {
+}
+.otions__submit {
+}
+.btn {
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+}
+
+.disabled {
+    display: none;
 }

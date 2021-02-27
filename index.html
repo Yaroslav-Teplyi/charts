@@ -9,9 +9,44 @@
 </head>
 <body>
 
-    
     <div class="chart-wrapper">
-        <canvas id="myChart" width="400" height="400"></canvas>
+        <form class="options" method="dialog">
+            <div class="type">
+                <h2 class="type__title">Type of Chart:</h2>
+                <label class="type__label"><input type="radio" name="typeOfChart" class="type__type type__bar">bar</label>
+                <label class="type__label"><input type="radio" name="typeOfChart" class="type__type type__line">line</label>
+                <label class="type__label"><input type="radio" name="typeOfChart" class="type__type type__pie">pie</label>
+            </div>
+            <div class="labels">
+                <h2 class="labels__title">Write labels:</h2>
+
+                <button class="labels__addBtn btn">add more elements</button>
+
+                <label class="labels__label">
+                    <input type="text" id="labelName1" placeholder="write label name">
+                    <input type="number" name="" id="labelValue1" placeholder="write value">
+                    title 1
+                </label>
+
+                <label class="labels__label">
+                    <input type="text" id="labelName2" placeholder="write label name">
+                    <input type="number" name="" id="labelValue2" placeholder="write value">
+                    title 2
+                </label>
+
+                <label class="labels__label">
+                    <input type="text" id="labelName3" placeholder="write label name">
+                    <input type="number" name="" id="labelValue3" placeholder="write value">
+                    title 3
+                </label>
+            </div>
+
+            <button class="options__submit btn">Submit</button>
+        </form>
+
+        <div class="chart-inner ">
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
