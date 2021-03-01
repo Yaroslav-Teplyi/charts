@@ -90,7 +90,12 @@ addMoreElementsBtn.addEventListener('click', () => {
     if(numberOfInputs < 6) {
         numberOfInputs++
 
-        labels.insertAdjacentHTML('beforeend', `<label class="labels__label"><input type="text" id="labelName${numberOfInputs}" placeholder="write label name"><input type="number" name="" id="labelValue${numberOfInputs}" placeholder="write value">title ${numberOfInputs}</label>`);
+        labels.insertAdjacentHTML('beforeend', 
+        `<label class="labels__label">
+            <input type="text" class="labels__name labels__input" id="labelName${numberOfInputs}" placeholder="write label name">
+            <input type="number" class="labels__number labels__input" name="" id="labelValue${numberOfInputs}" placeholder="write number">
+            title ${numberOfInputs}
+        </label>`);
     } else {
         alert('No more!!!');
     }

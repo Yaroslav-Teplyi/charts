@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
 }
 
 .chart-wrapper {
@@ -10,29 +11,18 @@
     width: 700px;
 }
 
-.chart-inner {
-
-}
-
-.options {
-}
 .type {
     display: flex;
     flex-direction: column;
 }
-.type__title {
+
+.type__label {
+    margin: 0 0 10px 20px;
 }
-.type__type {
-}
-.type__bar {
-}
-.type__line {
-}
-.type__pie {
-}
-.otions__submit {
-}
-.btn {
+
+.type__name {
+    font-size: 20px;
+    margin-left: 13px;
 }
 
 .labels {
@@ -40,6 +30,45 @@
     flex-direction: column;
 }
 
+.labels__addingString {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.labels__addBtn {
+    width: 35px;
+    margin-left: 20px;
+}
+
+.labels__label {
+    margin-bottom: 15px;
+}
+
+.labels__input {
+    padding: 0 10px;
+}
+
+.labels__number {
+    width: 90px;
+}
+
+.labels__number::-webkit-inner-spin-button, 
+.labels__number::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 .disabled {
     display: none;
+}
+
+.chart-inner {
+    width: 400px;
+}
+
+.btn {
+    padding: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
